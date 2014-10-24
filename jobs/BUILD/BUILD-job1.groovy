@@ -1,7 +1,7 @@
 job {
     name 'BUILD-job1'
     scm {
-        git('https://github.com/facebook/AsyncDisplayKit.git')
+        git('https://github.com/Azulinho/bristol-devops-jenkins-jobs.git')
     }
     triggers {
         scm('*/15 * * * *')
