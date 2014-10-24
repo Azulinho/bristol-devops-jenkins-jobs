@@ -1,6 +1,6 @@
 job {
     name 'BUILD-job1'
-    params {
+    parameters {
         stringParam("myParameter1")
     }
     scm {
