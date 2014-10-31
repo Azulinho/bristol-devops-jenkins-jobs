@@ -6,12 +6,13 @@ job {
     }
     deliveryPipelineConfiguration("Stage 1", "Task 1")
 
-    //configure {
-    //    (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
-    //    (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
-    //}
+    configure {
+        (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
+        (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
+    }
 
     configure {
+
         it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' {
             maxConcurrentPerNode(0)
             maxConcurrentTotal(1)
