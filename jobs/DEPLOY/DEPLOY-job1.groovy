@@ -11,13 +11,13 @@ job {
     //    (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
     //}
 
-    configure { project ->
-        project / properties << 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' {
-            maxConcurrentPerNode '0'
-            maxConcurrentTotal '1'
-            throttleEnabled 'true'
-            throttleOption 'category'
-            categories 'Stage 1'
+    configure {
+        it / 'project' / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' {
+            maxConcurrentPerNode(0)
+            maxConcurrentTotal(1)
+            throttleEnabled(true)
+            throttleOption('category')
+            categories('Stage 1')
         }
     }
 
