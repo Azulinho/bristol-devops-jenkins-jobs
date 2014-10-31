@@ -13,6 +13,10 @@ job {
 
     configure {
         (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty').setValue('maxConcurrentPerNode:0')
+        (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty').setValue('maxConcurrentTotal:1')
+        (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty').setValue('throttleEnabled:true')
+        (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty').setValue('throttleOption:category')
+        (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' / 'categories').setValue('Stage 1')
     }
 
     steps {
