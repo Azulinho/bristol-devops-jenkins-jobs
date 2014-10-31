@@ -13,11 +13,11 @@ job {
 
     configure { project ->
         project / properties << 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' {
-i           maxConcurrentPerNode    '0'
-            maxConcurrentTotal      '1'
-            throttleEnabled         'true'
-            throttleOption          'category'
-            categories              'Stage 1'
+            maxConcurrentPerNode(0)
+            maxConcurrentTotal(1)
+            throttleEnabled(true)
+            throttleOption('category')
+            categories('Stage 1')
         }
     }
 
