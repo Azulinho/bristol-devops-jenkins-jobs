@@ -6,6 +6,10 @@ job {
     }
     deliveryPipelineConfiguration("Stage 1", "Task 1")
 
+    configure {
+        (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
+    }
+
     steps {
         shell("echo DEPLOY 1")
     }
