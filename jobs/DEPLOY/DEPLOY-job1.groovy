@@ -8,6 +8,11 @@ job {
 
     configure {
         (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
+        (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
+    }
+
+    configure {
+        (it / 'properties' / 'hudson.plugins.throttleconcurrents.ThrottleJobProperty').setValue('maxConcurrentPerNode:0')
     }
 
     steps {
