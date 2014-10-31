@@ -6,10 +6,10 @@ job {
     }
     deliveryPipelineConfiguration("Stage 1", "Task 1")
 
-    configure {
-        (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
-        (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
-    }
+    //configure {
+    //    (it / 'blockBuildWhenUpstreamBuilding').setValue('true')
+    //    (it / 'blockBuildWhenDownstreamBuilding').setValue('true')
+    //}
 
     configure { project ->
         project / properties << 'hudson.plugins.throttleconcurrents.ThrottleJobProperty' {
